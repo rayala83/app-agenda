@@ -1,0 +1,33 @@
+{% extends 'reservas/base.html' %}
+
+{% block title %}Reservas registradas{% endblock %}
+
+{% block content %}
+<h2>Reservas registradas</h2>
+<table class="table table-striped mt-4">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Servicio</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for r in reservas %}
+      <tr>
+        <td>{{ r.nombre }}</td>
+        <td>{{ r.email }}</td>
+        <td>{{ r.servicio }}</td>
+        <td>{{ r.fecha }}</td>
+        <td>{{ r.hora }}</td>
+      </tr>
+    {% empty %}
+      <tr>
+        <td colspan="5">No hay reservas aún.</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
