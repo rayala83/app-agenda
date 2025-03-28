@@ -28,7 +28,7 @@ export default function LoginForm({ onLogin }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form style={styles.form} onSubmit={handleSubmit}>
       <h2>Iniciar sesión</h2>
       <input
         type="text"
@@ -47,3 +47,8 @@ export default function LoginForm({ onLogin }) {
     </form>
   );
 }
+const styles = {
+  form:{
+    textAlign:'center',
+  }
+};

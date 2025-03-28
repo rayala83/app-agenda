@@ -3,7 +3,7 @@ import { useState } from 'react';
 import LoginForm from './components/LoginForm';
 import ReservaForm from './components/ReservaForm';
 import ReservasAdmin from './components/ReservasAdmin';
-import NavBar from './components/NAvbar';
+import NavBar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import CalendarioReservas from './components/CalendarioReservas';
 
