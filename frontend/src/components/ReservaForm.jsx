@@ -25,15 +25,22 @@ export default function ReservaForm({ onNuevaReserva }) {
   ];
 
   useEffect(() => {
+    console.log('Ejecutando useEffect con fechaURL:', fechaURL);
     const fetchHorasOcupadas = async () => {
-      if (!fechaURL) return;
+      if (!fechaURL){
+        console.log('No hay fechaURL, se cancela la petición');
+        return;
+      } 
 
       try {
         const response = await axios.get(`http://127.0.0.1:8000/api/reservas/horas_ocupadas/?fecha=${fechaURL}`);
-        const horasOcupadas = response.data?.horas_ocupadas ?? [];
+        console.log('Respuesta de la API:', response.data);
+        const horasOcupadas = response.data ?? [];
+        console.log('Horas ocupadas extraídas:', horasOcupadas);
 
         // Filtrar horas disponibles
         const disponibles = todasLasHoras.filter(hora => !horasOcupadas.includes(hora));
+        console.log('Horas disponibles filtradas:', disponibles); 
         setHorasDisponibles(disponibles);
       } catch (err) {
         console.error('Error al obtener horas ocupadas:', err);
@@ -86,7 +93,7 @@ export default function ReservaForm({ onNuevaReserva }) {
 };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form  className='formulario-base' onSubmit={handleSubmit}>
       <h3>Crear nueva reserva</h3>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <input type="text" name="nombre" placeholder="Nombre" value={formData.nombre} onChange={handleChange} required />

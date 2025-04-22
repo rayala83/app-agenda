@@ -3,6 +3,7 @@ import { useState } from 'react';
 import LoginForm from './components/LoginForm';
 import ReservaForm from './components/ReservaForm';
 import ReservasAdmin from './components/ReservasAdmin';
+import Profesional from './components/Profesional';
 import NavBar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import CalendarioReservas from './components/CalendarioReservas';
@@ -18,6 +19,7 @@ function App() {
         {/* Ruta pública para agendar reserva */}
         <Route path="/reservar" element={<ReservaForm />} />
         <Route path="/calendario" element={<CalendarioReservas />} />
+        <Route path="/profesional" element={<Profesional />} />
 
         {/* Ruta de login */}
         <Route path="/admin" element={<LoginForm onLogin={() => setLoggedIn(true)} />} />

@@ -18,11 +18,13 @@ export default function CalendarioReservas() {
     return (
       <div style={{ textAlign: 'center' }}>
         <h2>Selecciona una fecha para reservar</h2>
-        <Calendar
-          onChange={handleSelectDate}
-          value={fechaSeleccionada}
-          minDate={new Date()}
-        />
+        <div className="calendar-container">
+          <Calendar
+            onChange={handleSelectDate}
+            value={fechaSeleccionada}
+            minDate={new Date()}
+          />
+        </div>
       </div>
     );
   }

@@ -69,6 +69,9 @@ export default function Reservas() {
             <th onClick={() => ordenarReservas("hora")}>
               Hora {orden.columna === "hora" ? (orden.ascendente ? "🔼" : "🔽") : ""}
             </th>
+            <th onClick={() => ordenarReservas("profesional")}>
+              Profesional {orden.columna === "profesional" ? (orden.ascendente ? "🔼" : "🔽") : ""}
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -78,6 +81,7 @@ export default function Reservas() {
               <td>{reserva.servicio}</td>
               <td>{reserva.fecha}</td>
               <td>{reserva.hora}</td>
+              <td>{reserva.profesional}</td>
             </tr>
           ))}
         </tbody>

@@ -1,0 +1,40 @@
+.container {
+    padding: 20px;
+  }
+
+  .div-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .div-item {
+    width: 20em;
+    height: auto;
+    background-color: #81ac82;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .div-item p{
+    max-width: 80%;
+    text-align: justify;
+  }
+
+  .btn-reserva {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
