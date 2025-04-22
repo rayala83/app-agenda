@@ -8,12 +8,12 @@ export default function HomePage() {
       <p style={styles.text}>
         Agenda tus citas de forma fácil y rápida. Haz clic en el botón de abajo para comenzar.
       </p>
-      <Link to="/reservar" style={styles.button}>
+      {/* <Link to="/reservar" style={styles.button}>
         Reservar una cita
-      </Link>
+      </Link> */}
       <br/>
       <br/>
-      <Link to="/calendario" style={styles.button}>Ver Calendario</Link>
+      <Link to="/profesional" style={styles.button}>Conoce al Equipo</Link>
     </div>
   );
 }
